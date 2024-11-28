@@ -9,7 +9,7 @@ soup = BeautifulSoup(source.text, "lxml")
 
 
 table = soup.find('table')
-headers = table.find_all('th')[0:11]
+headers = table.find_all('th')[0:11] #table had headers after each 11 inputs
 table_headers = [" ".join(title.text.replace('\n', '').split()) for title in headers]
 #print(table_headers)
 
